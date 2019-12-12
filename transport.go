@@ -117,6 +117,7 @@ func (t *tcpTransport) Read(conn interface{}, buf []byte) (num int, src net.Addr
 	c := conn.(net.Conn)
 	for {
 		num, err = c.Read(buf)
+		src = c.RemoteAddr()
 		if err != nil {
 			if e, ok := err.(net.Error); ok && e.Temporary() {
 				continue
