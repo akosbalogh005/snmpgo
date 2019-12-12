@@ -4,6 +4,9 @@
 snmpgo
 ======
 
+Originally from : https://github.com/k-sone/snmpgo
+Additionally added TCP transport.
+
 snmpgo is a golang implementation for SNMP.
 
 Supported Message Types
